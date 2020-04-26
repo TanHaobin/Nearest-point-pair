@@ -266,6 +266,8 @@ def partition(l=0, r=len(points) - 1):
 
 
 if __name__ == '__main__':
+    print("使用Pycharm弹出Plot的方式运行以得到更好的观看体验")
+    print("作者：https://github.com/TanHaobin/Nearest-point-pair\n\n")
     fig = plt.figure()  # 新建绘图窗口
     ax = fig.add_subplot(1, 1, 1)
     plt.xlim(0 - 5, maxRandNum + 5)
@@ -274,13 +276,13 @@ if __name__ == '__main__':
     plt.plot([i[0] for i in points], [i[1] for i in points], 'ro')
 
 
-
+    print("蛮力法")
     plt.pause(0.01)
     force()
     plt.pause(0.01)
 
 
-
+    print("分治法")
     ans = partition()
     print("所有点中距离最小的点对为", ans[1], ans[2], "距离为", ans[0])
     plt.pause(100)
